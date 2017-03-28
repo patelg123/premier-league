@@ -1,14 +1,24 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html ng-app="premierLeagueApp">
   <head>
     <meta charset="utf-8">
     <title>My HTML File</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style_sheets/clublist.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="club-list/club-list.module.js"></script>
+    <script src="club-list/club-list.component.js"></script>
   </head>
   <body>
 
-    <p>Nothing here {{'yet' + '!'}}</p>
+    <h1>Premier League Teams</h1>
+
+    <!-- uses the clubList component -->
+    <club-list> </club-list> 
+
+
+    
 
   </body>
 </html>

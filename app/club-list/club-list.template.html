@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+		<!-- Side bar -->
+		<p>
+			<b>Sort By:</b>
+				<select ng-model="$ctrl.orderList">
+					<option value="full_name">Name</option>
+					<option value="founded_year">Founded</option>
+				</select>
+				
+		</p>
+
+		</div>
+
+		<div class="col-md-10">
+			<ul>
+			    <li ng-repeat="club in $ctrl.clubs |orderBy:$ctrl.orderList">
+			    	<span class="club_name">{{ club.full_name }}</span>
+			    	<p>
+			    		Nick Name(s){{ club.nick_names }} <br />
+			    		Founded: {{ club.founded_year + ' ' + club.founded_notes}}  <br />
+			    		Ground Name: {{ club.ground_name }}<br />
+			    		Ground Capacity: {{ club.ground_capacity }}
+			   		</p>
+			   	</li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<h3>Total items in list is {{$ctrl.clubs.length}}</h3>
+
+
+
+
+
+<!--
+full_name: 		'AFC Bournemouth',
+					nick_names: 	'The Cherries, Boscombe',
+					founded_year: 	'1899',
+					founded_notes: 	'118 years ago as Boscombe FC',
+					ground_name: 	'Dean Court', 
+					ground_capacity:'11464'
+-->
