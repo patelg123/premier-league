@@ -1,5 +1,7 @@
 [
 	{
+		"id":				"Arsenal_FC",
+		"imageUrl":			"images/clubs/Arsenal_FC.svg.png",
 		"full_name":		"Arsenal Football Club",
 		"nick_names": 		"The Gunners",
 		"founded_year": 	"1886",
@@ -10,7 +12,9 @@
 		"club_chairman": 	"Sir Chips Keswick"    
 	},
 	{
+		"id":				"AFC_Bournemouth",
 		"full_name": 		"AFC Bournemouth",
+		"imageUrl":			"images/clubs/AFC_Bournemouth.svg.png",
 		"nick_names": 		"The Cherries, Boscombe",
 		"founded_year": 	"1899",
 		"founded_notes": 	"118 years ago as Boscombe FC",

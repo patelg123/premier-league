@@ -19,6 +19,17 @@
 		</div>
 
 		<div class="col-md-10">
+
+		<ul class="clubs">
+			<li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList" class="thumbnail">
+				<a href="#/clubs/{{club.id}}" class="thumb">
+					<img ng-src="{{club.imageUrl}}" alt="{{club.full_name}}" />
+				</a>
+
+				<a href="#/clubs/{{club.id}}" class="club_name">{{club.full_name}}</a>
+			</li>
+		</ul>
+			<!--
 			<ul>
 			    <li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList">
 			    	<span class="club_name">{{ club.full_name }}</span>
@@ -30,12 +41,12 @@
 			   		</p>
 			   	</li>
 			</ul>
+			-->
+
 		</div>
 
 	</div>
 </div>
-
-<h3>Total items in list is {{$ctrl.clubs.length}}</h3>
 
 
 

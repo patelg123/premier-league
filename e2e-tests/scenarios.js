@@ -65,6 +65,18 @@ describe('Premier League App', function() {
 
 	    });
 
+
+		it('should render club specific links', function() {
+  			var query = element(by.model('$ctrl.query'));
+  			query.sendKeys('Arsenal');
+
+  			element.all(by.css('.clubs li a')).first().click();
+  			expect(browser.getLocationAbsUrl()).toBe('/clubs/Arsenal_FC');
+		});
+
+
+
+
 	});
 
 });
