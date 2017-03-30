@@ -3,31 +3,16 @@ angular.
 	module('clubList').
 	component('clubList', {
 		templateUrl: 'club-list/club-list.template.html', 
-		controller: function clubListController() {
-			this.clubs = 
-			[
-				{
-					full_name: 		'Arsenal Football Club',
-					nick_names: 	'The Gunners',
-					founded_year: 	'1886',
-					founded_notes: 	'131 years ago as Dial Square FC',
-					ground_name: 	'Emirates Stadium', 
-					ground_capacity:'60432'
-				},
-				{
-					full_name: 		'AFC Bournemouth',
-					nick_names: 	'The Cherries, Boscombe',
-					founded_year: 	'1899',
-					founded_notes: 	'118 years ago as Boscombe FC',
-					ground_name: 	'Dean Court', 
-					ground_capacity:'11464'
-				}
-			];
+		controller: ['$http',
+			function clubListController($http) {
+				var self = this;
+				self.orderList = "full_name";
 
-			this.orderList = "full_name";
-
-		}
-
+				$http.get('clubs/clubs.json').then(function(response) {
+        			self.clubs = response.data;
+      			});			
+			}
+		]
 	});
 
 

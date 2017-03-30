@@ -1,0 +1,22 @@
+[
+	{
+		"full_name":		"Arsenal Football Club",
+		"nick_names": 		"The Gunners",
+		"founded_year": 	"1886",
+		"founded_notes": 	"131 years ago as Dial Square FC",
+		"ground_name": 		"Emirates Stadium", 
+		"ground_capacity": 	"60432",
+		"club_owner": 		"Arsenal Holdings plc",
+		"club_chairman": 	"Sir Chips Keswick"    
+	},
+	{
+		"full_name": 		"AFC Bournemouth",
+		"nick_names": 		"The Cherries, Boscombe",
+		"founded_year": 	"1899",
+		"founded_notes": 	"118 years ago as Boscombe FC",
+		"ground_name": 		"Dean Court", 
+		"ground_capacity":	"11464",
+		"club_owner": 		"Maxim Demin",
+		"club_chairman": 	"Jeff Mostyn"
+	}
+]

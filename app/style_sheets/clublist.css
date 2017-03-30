@@ -1,4 +1,10 @@
 .club_name
 {
 	font-weight: bold;
+	font-size: 25px;
+}
+
+.club_fact_heading
+{
+	font-weight: bold;
 }

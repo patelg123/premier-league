@@ -2,26 +2,31 @@
 	<div class="row">
 		<div class="col-md-2">
 		<!-- Side bar -->
+
+		<p>
+			<b>Search: </b> <input ng-model="$ctrl.query" />
+
+		</p>
+
 		<p>
 			<b>Sort By:</b>
 				<select ng-model="$ctrl.orderList">
 					<option value="full_name">Name</option>
 					<option value="founded_year">Founded</option>
 				</select>
-				
 		</p>
 
 		</div>
 
 		<div class="col-md-10">
 			<ul>
-			    <li ng-repeat="club in $ctrl.clubs |orderBy:$ctrl.orderList">
+			    <li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList">
 			    	<span class="club_name">{{ club.full_name }}</span>
 			    	<p>
-			    		Nick Name(s){{ club.nick_names }} <br />
-			    		Founded: {{ club.founded_year + ' ' + club.founded_notes}}  <br />
-			    		Ground Name: {{ club.ground_name }}<br />
-			    		Ground Capacity: {{ club.ground_capacity }}
+			    		<span class="club_fact_heading">Nick Name(s): </span> {{ club.nick_names }} <br />
+			    		<span class="club_fact_heading">Founded: </span> {{ club.founded_year + ' ' + club.founded_notes}}  <br />
+			    		<span class="club_fact_heading">Ground Name: </span>{{ club.ground_name }}<br />
+			    		<span class="club_fact_heading">Ground Capacity: </span> {{ club.ground_capacity }}
 			   		</p>
 			   	</li>
 			</ul>
