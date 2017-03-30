@@ -6,18 +6,23 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="style_sheets/clublist.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="club-list/club-list.module.js"></script>
     <script src="club-list/club-list.component.js"></script>
+    <script src="club-detail/club-detail.module.js"></script>
+    <script src="club-detail/club-detail.component.js"></script>
   </head>
   <body>
 
     <img src="images/clubs/Premier_League_Logo.svg.png" alt="Premier League Logo" class="thumbnail"/>
-    <!-- uses the clubList component -->
-
     
 
-    <club-list> </club-list> 
+    
+      <div ng-view></div>
+
+    
 
 
     

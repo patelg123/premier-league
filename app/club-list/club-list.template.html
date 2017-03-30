@@ -22,11 +22,11 @@
 
 		<ul class="clubs">
 			<li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList" class="thumbnail">
-				<a href="#/clubs/{{club.id}}" class="thumb">
+				<a href="#!/clubs/{{club.id}}" class="thumb">
 					<img ng-src="{{club.imageUrl}}" alt="{{club.full_name}}" />
 				</a>
 
-				<a href="#/clubs/{{club.id}}" class="club_name">{{club.full_name}}</a>
+				<a href="#!/clubs/{{club.id}}" class="club_name">{{club.full_name}}</a>
 			</li>
 		</ul>
 			<!--

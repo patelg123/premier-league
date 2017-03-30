@@ -1,1 +1,5 @@
-angular.module('premierLeagueApp', ['clubList']);
+angular.module('premierLeagueApp', [
+	'ngRoute',
+	'clubDetail',
+	'clubList'
+]);

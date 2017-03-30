@@ -5,11 +5,17 @@
 
 describe('Premier League App', function() {
 
+	it('should redirect `index.html` to `index.html#!/clubs', function() {
+    	browser.get('index.html');
+    	expect(browser.getLocationAbsUrl()).toBe('/clubs');
+  	});
 
-	describe('clubList', function(){
+
+
+	describe('View: Club list', function() {
 
 	 	beforeEach(function() {
-	    	browser.get('index.html');
+	    	browser.get('index.html#!/clubs');
 	  	});
 
 
@@ -78,6 +84,21 @@ describe('Premier League App', function() {
 
 
 	});
+
+
+	describe('View: Club detail', function() {
+
+    	beforeEach(function() {
+      		browser.get('index.html#!/clubs/AFC_Bournemouth');
+    	});
+
+    	it('should display placeholder page with `clubId`', function() {
+      		expect(element(by.binding('$ctrl.clubId')).getText()).toBe('AFC_Bournemouth');
+    	});
+
+  	});
+
+
 
 });
 
