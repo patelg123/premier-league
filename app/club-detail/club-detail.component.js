@@ -1,10 +1,15 @@
 angular.
   module('clubDetail').
   component('clubDetail', {
-    template: 'TBD: Detail view for <span>{{$ctrl.clubId}}</span>',
-    controller: ['$routeParams',
-      function ClubDetailController($routeParams) {
-        this.clubId = $routeParams.clubId;
+    templateUrl: 'club-detail/club-detail.template.html',
+    controller: ['$http','$routeParams',
+      function ClubDetailController($http, $routeParams) {
+      	var self = this;
+        
+      	$http.get('clubs/' + $routeParams.clubId + '.json').then(function(response) {
+          self.club = response.data;
+        });
+
       }
     ]
   });

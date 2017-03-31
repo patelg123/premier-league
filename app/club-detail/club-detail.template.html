@@ -1,0 +1,56 @@
+<img ng-src="{{$ctrl.club.images[0]}}" class="club" />
+
+<h1>{{$ctrl.club.full_name}}</h1>
+
+<ul class="club-thumbs">
+  <li ng-repeat="img in $ctrl.club.images">
+    <img ng-src="{{img}}" />
+  </li>
+</ul>
+
+
+<ul class="specs">
+
+  <li>
+    <span>Nick Names</span>
+      <dl>{{ $ctrl.club.nick_names }}</dl>
+  </li>
+
+  <li>
+    <span>Founded</span>
+      <dl>{{ $ctrl.club.founded_year }} {{ $ctrl.club.founded_notes }}</dl>
+  </li>
+
+  <li>
+    <span>Ground</span>
+      <dl>Name: {{ $ctrl.club.ground_name }}  Capacity: {{ $ctrl.club.ground_capacity }}</dl>
+  </li>
+
+  <li>
+    <span>Owner</span>
+      <dl>{{ $ctrl.club.club_owner }}</dl>
+  </li>
+
+  <li>
+    <span>Chairman</span>
+      <dl>{{ $ctrl.club.club_chairman }}</dl>
+  </li>
+
+</ul>
+
+<!--
+<ul class="specs">
+  <li>
+    <span>Availability and Networks</span>
+    <dl>
+      <dt>Availability</dt>
+      <dd ng-repeat="availability in $ctrl.club.availability">{{availability}}</dd>
+    </dl>
+  </li>
+  ...
+  <li>
+    <span>Additional Features</span>
+    <dd>{{$ctrl.club.additionalFeatures}}</dd>
+  </li>
+</ul>
+-->

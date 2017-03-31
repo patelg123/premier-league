@@ -1,0 +1,17 @@
+{
+	"id":				"Arsenal_FC",
+	"images":			[
+							"images/clubs/Arsenal_FC.svg.png",
+							"images/clubs/Arsenal_FC-AK-1617-258x340.png",
+							"images/clubs/Arsenal_FC-HK-1617-258x340.png",
+							"images/clubs/Arsenal_FC-TK-1617-258x340.png"
+						],
+	"full_name":		"Arsenal Football Club",
+	"nick_names": 		"The Gunners",
+	"founded_year": 	"1886",
+	"founded_notes": 	"131 years ago as Dial Square FC",
+	"ground_name": 		"Emirates Stadium", 
+	"ground_capacity": 	"60432",
+	"club_owner": 		"Arsenal Holdings plc",
+	"club_chairman": 	"Sir Chips Keswick"    
+}

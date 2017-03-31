@@ -68,7 +68,6 @@ describe('Premier League App', function() {
 		        'Arsenal Football Club'
 		    ]);
 
-
 	    });
 
 
@@ -80,9 +79,6 @@ describe('Premier League App', function() {
   			expect(browser.getLocationAbsUrl()).toBe('/clubs/Arsenal_FC');
 		});
 
-
-
-
 	});
 
 
@@ -93,12 +89,10 @@ describe('Premier League App', function() {
     	});
 
     	it('should display placeholder page with `clubId`', function() {
-      		expect(element(by.binding('$ctrl.clubId')).getText()).toBe('AFC_Bournemouth');
+      		expect(element(by.binding('$ctrl.club.full_name')).getText()).toBe('AFC Bournemouth');
     	});
 
   	});
-
-
 
 });
 

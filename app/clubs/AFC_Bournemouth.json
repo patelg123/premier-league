@@ -1,0 +1,17 @@
+{
+	"id":				"AFC_Bournemouth",
+	"full_name": 		"AFC Bournemouth",
+	"images":			[
+							"images/clubs/AFC_Bournemouth.svg.png",
+							"images/clubs/AFC_Bournemouth-AK-1617-258x340.png",
+							"images/clubs/AFC_Bournemouth-HK-1617-258x340.png",
+							"images/clubs/AFC_Bournemouth-TK-1617-258x340.png"
+						],
+	"nick_names": 		"The Cherries, Boscombe",
+	"founded_year": 	"1899",
+	"founded_notes": 	"118 years ago as Boscombe FC",
+	"ground_name": 		"Dean Court", 
+	"ground_capacity":	"11464",
+	"club_owner": 		"Maxim Demin",
+	"club_chairman": 	"Jeff Mostyn"
+}
