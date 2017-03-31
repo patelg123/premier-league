@@ -92,6 +92,15 @@ describe('Premier League App', function() {
       		expect(element(by.binding('$ctrl.club.full_name')).getText()).toBe('AFC Bournemouth');
     	});
 
+
+    	it('should display 4 thumb nail images', function() {
+
+    		var imageList = element.all(by.repeater('img in $ctrl.club.images'));
+	      	expect(imageList.count()).toBe(4);
+    		
+
+    		});
+
   	});
 
 });
