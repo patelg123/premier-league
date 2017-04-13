@@ -3,14 +3,11 @@ angular.
 	module('clubList').
 	component('clubList', {
 		templateUrl: 'club-list/club-list.template.html', 
-		controller: ['$http',
-			function clubListController($http) {
-				var self = this;
-				self.orderList = "full_name";
-
-				$http.get('clubs/clubs.json').then(function(response) {
-        			self.clubs = response.data;
-      			});			
+		controller: ['Club',
+			function ClubListController(Club) {
+				this.clubs = Club.query();
+				this.orderList = "full_name";
+      					
 			}
 		]
 	});

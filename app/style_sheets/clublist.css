@@ -4,6 +4,7 @@ body {
 
 h1 {
   border-bottom: 1px solid gray;
+  margin-top: 0;
 }
 
 
@@ -30,14 +31,30 @@ h1 {
 /* View: Club detail */
 .club {
   background-color: white;
-  border: 1px solid black;
+  display: none;
   float: left;
-  height: 200px;
+  height: 250px;
   margin-bottom: 2em;
   margin-right: 3em;
   padding: 2em;
-  width: 200px;
+  width: 250px;
 }
+
+
+.club:first-child {
+  display: block;
+}
+
+.club-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+
 
 .club-thumbs {
   list-style: none;
@@ -45,14 +62,15 @@ h1 {
 }
 
 .club-thumbs img {
-  height: 100px;
+  height: 75px;
   padding: 1em;
-  width: 100px;
+  width: 70px;
 }
 
 .club-thumbs li {
   background-color: white;
   border: 1px solid black;
+  cursor: pointer;
   display: inline-block;
   margin: 1em;
 }

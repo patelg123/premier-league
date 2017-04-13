@@ -1,10 +1,16 @@
-<img ng-src="{{$ctrl.club.images[0]}}" class="club" />
+
+
+<div class="club-images">
+  <img ng-src="{{img}}" class="club"
+      ng-class="{selected: img === $ctrl.mainImageUrl}"
+      ng-repeat="img in $ctrl.club.images" />
+</div>
 
 <h1>{{$ctrl.club.full_name}}</h1>
 
 <ul class="club-thumbs">
   <li ng-repeat="img in $ctrl.club.images">
-    <img ng-src="{{img}}" />
+    <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" />
   </li>
 </ul>
 

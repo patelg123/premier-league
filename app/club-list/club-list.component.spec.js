@@ -1,3 +1,5 @@
+'use strict'
+
 describe('clubList', function() {
 	
 	// load module that contains itemList component before each test
@@ -5,7 +7,7 @@ describe('clubList', function() {
 
 
 	// Test the controller
-	describe('clubListController', function() {
+	describe('ClubListController', function() {
 
 		var $httpBackend, ctrl;
 
@@ -20,11 +22,13 @@ describe('clubList', function() {
 
 		}));
 
-		//it('should create a items model with 2 items', function() {
-		//	expect(ctrl.clubs.length).toBe(2);
+		
 
 		it('should create a `clubs` property with 2 clubs fetched with `$http`', function() {
-			expect(ctrl.clubs).toBeUndefined();
+
+			jasmine.addCustomEqualityTester(angular.equals);
+
+			expect(ctrl.clubs).toEqual([]);
 
 			$httpBackend.flush();
 			expect(ctrl.clubs).toEqual([{full_name: 'Arsenal Football Club'}, {full_name: 'AFC Bournemouth'}]);

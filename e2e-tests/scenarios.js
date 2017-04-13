@@ -99,7 +99,25 @@ describe('Premier League App', function() {
 	      	expect(imageList.count()).toBe(4);
     		
 
-    		});
+    	});
+
+    	it('should display the first club image as the main club image', function() {
+    		var mainImage = element(by.css('img.club.selected'));
+
+    		expect(mainImage.getAttribute('src')).toMatch(/images\/clubs\/AFC_Bournemouth.svg.png/);
+  		});
+
+		it('should swap the main image when clicking on a thumbnail image', function() {
+    		var mainImage = element(by.css('img.club.selected'));
+    		var thumbnails = element.all(by.css('.club-thumbs img'));
+
+    		thumbnails.get(2).click();
+    		expect(mainImage.getAttribute('src')).toMatch(/images\/clubs\/AFC_Bournemouth-HK-1617-258x340.png/);
+
+    		thumbnails.get(0).click();
+    		expect(mainImage.getAttribute('src')).toMatch(/images\/clubs\/AFC_Bournemouth.svg.png/);
+  		});    	
+
 
   	});
 

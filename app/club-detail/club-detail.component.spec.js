@@ -2,27 +2,35 @@
 
 describe('clubDetail', function() {
 
-  // Load the module that contains the `phoneDetail` component before each test
+  // Load the module that contains the `ClubDetail` component before each test
   beforeEach(module('clubDetail'));
 
   // Test the controller
   describe('ClubDetailController', function() {
     var $httpBackend, ctrl;
 
+    var xyzClubData = {
+        name: 'club xyz',
+        images: ['image/url1.png', 'image/url2.png']
+    };
+
+
     beforeEach(inject(function($componentController, _$httpBackend_, $routeParams) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('clubs/Arsenal_FC.json').respond({full_name: 'Arsenal Football Club'});
+      $httpBackend.expectGET('clubs/xyz.json').respond(xyzClubData);
 
-      $routeParams.clubId = 'Arsenal_FC';
+      $routeParams.clubId = 'xyz';
 
       ctrl = $componentController('clubDetail');
     }));
 
     it('should fetch the club details', function() {
-      expect(ctrl.club).toBeUndefined();
+      jasmine.addCustomEqualityTester(angular.equals);
+
+      expect(ctrl.club).toEqual({});
 
       $httpBackend.flush();
-      expect(ctrl.club).toEqual({full_name: 'Arsenal Football Club'});
+      expect(ctrl.club).toEqual(xyzClubData);
     });
 
   });

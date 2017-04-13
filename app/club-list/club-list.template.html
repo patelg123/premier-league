@@ -21,7 +21,7 @@
 		<div class="col-md-10">
 
 		<ul class="clubs">
-			<li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList" class="thumbnail">
+			<li ng-repeat="club in $ctrl.clubs | filter: $ctrl.query | orderBy:$ctrl.orderList" class="thumbnail club-list-item">
 				<a href="#!/clubs/{{club.id}}" class="thumb">
 					<img ng-src="{{club.imageUrl}}" alt="{{club.full_name}}" />
 				</a>

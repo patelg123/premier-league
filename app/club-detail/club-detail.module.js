@@ -1,3 +1,4 @@
 angular.module('clubDetail', [
-  'ngRoute'
+  'ngRoute',
+  'core.club'
 ]);
